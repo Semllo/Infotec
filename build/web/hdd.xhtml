@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>#{mensajes.hd22}</title>
+         <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+  <div data-role="page" id="pageone" data-theme="b">
+    <div id="contenedor">
+    <h:body>
+        
+        <h1>#{mensajes.hd21} </h1>
+       <h:form>
+       
+
+           <h:selectOneRadio value="#{componente.hdisk}" >
+               <br></br>
+        <f:selectItem itemValue="Disco HDD 1T @50" itemLabel="Disco HDD 1T 50€" />
+        <br></br>
+        <f:selectItem itemValue="Disco HDD 2T @100" itemLabel="Disco HDD 2T 100€" />
+        <br></br>
+        <f:selectItem itemValue="Disco SSHD 1T @80" itemLabel="Disco SSHD 1T 80€" />
+        <br></br>
+        <f:selectItem itemValue="Disco SSD 120G @120" itemLabel="Disco  SSD 120G 120€" />
+        <br></br>
+        <f:selectItem itemValue="Disco SSD 240G @200" itemLabel="Disco  SSD 240G 200€" />
+       </h:selectOneRadio>	
+       
+          <h:commandButton value="Volver" action="#{tienda.validar}" />
+                         
+       </h:form>
+       
+    </h:body>
+        </div>
+      </div>
+</html>

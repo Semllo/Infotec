@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>#{mensajes.titulo2}</title>
+         <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+<div data-role="page" id="pageone" data-theme="b">
+    <div id="contenedor">
+        <br> <h:graphicImage value="/resources/images/images.jpg" styleClass="content" /></br>
+    <h:body>
+        <h1>#{mensajes.saludo}</h1>
+       
+       #{mensajes.texto1}<br/>
+       <h:form>
+           <h:selectOneMenu value="#{tienda.componente}">
+               <f:selectItem itemValue="hdd"></f:selectItem>
+               <f:selectItem itemValue="ram"> </f:selectItem>
+               <f:selectItem itemValue="cpu"> </f:selectItem>
+               <f:selectItem itemValue="grafica"></f:selectItem>
+               
+           </h:selectOneMenu>
+               
+         <h:commandButton value="#{mensajes.boton3}" action="#{tienda.paginaenvio}"/>
+         <h:commandButton value="#{mensajes.boton4}" action="#{componente.carro}"/>
+       
+       </h:form>
+       
+       
+    </h:body>
+   </div>
+  </div>
+</html>
+

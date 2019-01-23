@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+              <title>#{mensajes.ram2}</title>
+               <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+<div data-role="page" id="pageone" data-theme="b">
+    <div id="contenedor">
+    <h:body>
+        
+        <h1>#{mensajes.ram1} </h1>
+       <h:form>
+           <h:panelGrid columns="1"> 
+           <h:selectOneRadio value="#{componente.ram}" >
+       <f:selectItem itemValue="Memoria DDR2 1GB @30" itemLabel="Memoria DDR2 1GB -- 30€" />
+       <f:selectItem itemValue="Memoria DDR2 2GB @40" itemLabel="Memoria DDR2 2GB -- 40€" />
+       <f:selectItem itemValue="Memoria DDR3 1GB @17" itemLabel="Memoria DDR2 1GB -- 17€" />
+       <f:selectItem itemValue="Memoria DDR3 2GB @25" itemLabel="Memoria DDR2 2GB -- 25€" />
+       <f:selectItem itemValue="Memoria DDR3 4GB @40" itemLabel="Memoria DDR2 4GB -- 40€" />
+       </h:selectOneRadio>	
+       
+          <h:commandButton value="Volver" action="#{tienda.validar}" />
+           </h:panelGrid>   
+       </h:form>
+       
+    </h:body>
+   </div>
+  </div>
+</html>

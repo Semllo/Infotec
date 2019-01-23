@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+              <title>#{mensajes.cpu1}</title>
+               <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+<div data-role="page" id="pageone" data-theme="b">
+        <div id="contenedor">
+    <h:body>
+        
+        <h1>#{mensajes.cpu2} </h1>
+
+      <h:form>
+          <h:selectOneRadio value="#{componente.micro}" >
+              
+        <f:selectItem itemValue="Intel Core i3  @100" itemLabel="Intel Core i3 -- 100€" />
+           
+        <f:selectItem itemValue="Intel Core i5  @220" itemLabel="Intel Core i5  -- 220€" />
+       
+        <f:selectItem itemValue="Intel Core i7  @320" itemLabel="Intel Core i7  -- 320€" />
+       
+        <f:selectItem itemValue="AMD Athlon II  @56" itemLabel="AMD Athlon II  -- 56€" />
+         
+        <f:selectItem itemValue="AMD FX-6350  @150" itemLabel="AMD FX-6350  -- 150€" />
+       </h:selectOneRadio>	
+       
+          <h:commandButton value="Volver" action="#{tienda.validar}" />
+                         
+       </h:form>
+       
+    </h:body>
+    </div>
+    </div>
+</html>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    
+    
+
+    
+    <h:head>
+        <title>#{mensajes.titulo} </title>
+        <h:outputStylesheet library="css" name="style.css"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+    </h:head>
+ 
+
+<div data-role="page" id="pageone" data-theme="b">
+    <div id="idioma">
+          <h:form>
+         <h:selectOneMenu value="#{formulario.pais}" 
+                             onchange="submit()"
+                             valueChangeListener="#{formulario.cambioPais}">
+                <f:selectItems value="#{formulario.paises}" />
+            </h:selectOneMenu>
+           </h:form>
+    </div>
+    
+    <div id="contenedor">
+    
+    <h:body>
+        <h1>#{mensajes.titulo} <br> <h:graphicImage value="/resources/images/images.jpg" styleClass="content" /></br></h1>
+        <h:form>
+        <h2>#{mensajes.saludo}</h2>
+        <h:panelGrid columns="2">
+         <h:outputText value="#{mensajes.usuario}"/>
+         <h:inputText id="user" value="#{tienda.user}" required="true"/>
+         <h:outputText value="#{mensajes.contra}"/>
+         <h:inputSecret id="pass" value="#{tienda.pass}" required="true"/>
+         
+         
+       
+         <h:commandButton value="#{mensajes.boton1}" action="#{tienda.validar}" />
+          
+         <h:commandButton type="reset" value="#{mensajes.boton2}"/> 
+         </h:panelGrid>
+         </h:form>
+      
+               
+    </h:body>
+     </div>
+    </div>
+</html>
+

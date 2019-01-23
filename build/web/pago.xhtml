@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>#{mensajes.IP}</title>
+         <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+<div data-role="page" id="pageone" data-theme="b">
+    <div id="contenedor">
+    <h:body>
+        <h:form>
+        <h1><h:outputText value="#{mensajes.IP}"/></h1>
+        <h:panelGrid columns="2">
+            <h:outputText value="Nombre"/>
+            <h:inputText value="#{pago.nombre}" required="true"/>
+            <h:outputText value="Telefono"/>
+            <h:inputText value="#{pago.telefono}" required="true"/>
+            <h:outputText value="Direcion"/>
+            <h:inputText value="#{pago.direccion}" required="true"/>
+            <h:outputText value="Pais"/>
+            <h:inputText value="#{pago.pais}" required="true"/>
+            <h:outputText value="Provicia"/>
+            <h:inputText value="#{pago.provincia}" required="true"/>
+            <h:outputText value="Localidad"/>
+            <h:inputText value="#{pago.localidad}" required="true"/>
+            <h:outputText value="codigo postal"/>
+            <h:inputText value="#{pago.cp}" required="true"/>
+            </h:panelGrid>
+            <h:outputText value="-------------------------------"/>
+            <h:panelGrid columns="2">
+            <h:outputText value="Precio"/>
+            <h:inputText value="#{componente.total} €" readonly="true"/>
+            <h:outputText value="Nº Tarjeta"/>
+            <h:inputText value="#{pago.tarjeta}" required="true"/>
+            <h:outputText value="fecha"/>
+            <h:inputText value="#{pago.fecha}" required="true"/>
+        </h:panelGrid>
+        <h:commandButton value="#{mensajes.B}" action="tienda"/>
+        <h:commandButton value="#{mensajes.F}" action="#{tienda.finalizar}"/>
+            </h:form>
+    </h:body>
+        </div>
+    </div>
+</html>
+

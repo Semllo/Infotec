@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+              <title>#{mensajes.gp2}</title>
+               <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    
+<div data-role="page" id="pageone" data-theme="b">
+    <div id="contenedor">
+    <h:body>
+        
+        <h1>#{mensajes.gp1} </h1>
+       <h:form>
+           <h:selectOneRadio value="#{componente.grafica}" >
+        <f:selectItem itemValue="NVIDIA GTX 560  @220" itemLabel="NVIDIA GTX 560  -- 220€" />
+        <f:selectItem itemValue="NVIDIA GTX 580 @280" itemLabel="NVIDIA GTX 580 -- 280€" />
+        <f:selectItem itemValue="NVIDIA GTX 760  @340" itemLabel="NVIDIA GTX 760  -- 340€" />
+        <f:selectItem itemValue=" R9 270X @180" itemLabel="AMD R9 270X -- 180€" />
+        <f:selectItem itemValue=" R9 280X @257" itemLabel="AMD R9 280X -- 257€" />
+       </h:selectOneRadio>	
+       
+          <h:commandButton value="Volver" action="#{tienda.validar}" />
+                         
+       </h:form>
+       
+    </h:body>
+        </div>
+    </div>
+</html>
+
